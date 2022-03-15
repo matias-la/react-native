@@ -727,7 +727,7 @@ jobs:
       - run: node ./scripts/publish-npm.js << parameters.publish_npm_args >>
       - run: ls -lah
       - store_artifacts:
-        path: react-native-0.64.0.tgz
+          path: react-native-0.64.0.tgz
 
   # -------------------------
   #    JOBS: Nightly
