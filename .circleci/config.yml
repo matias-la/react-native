@@ -725,6 +725,9 @@ jobs:
           git config --global user.name "npm Deployment Script"
           echo "machine github.com login react-native-bot password $GITHUB_TOKEN" > ~/.netrc
       - run: node ./scripts/publish-npm.js << parameters.publish_npm_args >>
+      - run: ls -lah
+      - store_artifacts:
+        path: react-native-0.64.0.tgz
 
   # -------------------------
   #    JOBS: Nightly
